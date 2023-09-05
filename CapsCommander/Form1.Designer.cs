@@ -38,8 +38,8 @@
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            timer1.Interval = 500;
+            timer1.Tick += Timer1_Tick;
             // 
             // notifyIcon1
             // 
@@ -49,9 +49,8 @@
             notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.Visible = true;
-            notifyIcon1.Click += notifyIcon1_Click;
-            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
-            notifyIcon1.MouseDown += notifyIcon1_MouseDown;
+            notifyIcon1.Click += NotifyIcon1_Click;
+            notifyIcon1.MouseDoubleClick += NotifyIcon1_MouseDoubleClick;
             // 
             // imageList1
             // 
@@ -71,10 +70,10 @@
             ClientSize = new Size(278, 103);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.Manual;
             Text = "CapsLock Commander";
             WindowState = FormWindowState.Minimized;
-            Load += Form1_Load;
             ResumeLayout(false);
         }
 
